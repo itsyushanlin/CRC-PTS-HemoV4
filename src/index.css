@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Georgia", serif;
+  --font-sans: "Helvetica Neue", Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --color-natural-bg: #F4F3EF;
+  --color-natural-ink: #3C4142;
+  --color-natural-accent: #7D8E95;
+  --color-natural-sidebar: #EAE7E1;
+  --color-natural-link: #5E717A;
+  --color-natural-border: #D1CDC4;
+  --color-natural-badge-bg: #E2E8E4;
+  --color-natural-badge-text: #5A7D6A;
+  --color-natural-white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-natural-bg text-natural-ink antialiased selection:bg-natural-accent/20;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .serif {
+    font-family: var(--font-serif);
+  }
+}
